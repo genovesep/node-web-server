@@ -59,6 +59,13 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    message: 'This page is about my current projects'
+  });
+});
+
 app.get('/bad', (req, res) => {
   res.send({
     error: 'Unable to proceed with this request'
